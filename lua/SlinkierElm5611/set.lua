@@ -9,3 +9,5 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 vim.opt.scrolloff = 8
 vim.opt.wrap = false
+
+vim.g.blamer_delay = 0
