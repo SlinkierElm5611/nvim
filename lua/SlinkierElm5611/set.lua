@@ -1,3 +1,4 @@
+vim.opt.updatetime=100
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.tabstop = 4
@@ -9,5 +10,6 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 vim.opt.scrolloff = 8
 vim.opt.wrap = false
+vim.opt.swapfile = false
 
 vim.g.blamer_delay = 0

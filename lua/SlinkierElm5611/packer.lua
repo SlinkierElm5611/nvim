@@ -4,6 +4,7 @@ return require('packer').startup(function(use)
     use 'folke/tokyonight.nvim'
     use 'APZelos/blamer.nvim'
     use 'airblade/vim-gitgutter'
+    use 'vim-airline/vim-airline'
     use "lukas-reineke/indent-blankline.nvim"
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
