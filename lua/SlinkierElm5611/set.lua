@@ -13,3 +13,4 @@ vim.opt.wrap = false
 vim.opt.swapfile = false
 
 vim.g.blamer_delay = 0
+vim.g.copilot_assume_mapped = true

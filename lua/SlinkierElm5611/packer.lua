@@ -6,6 +6,7 @@ return require('packer').startup(function(use)
     use 'airblade/vim-gitgutter'
     use 'vim-airline/vim-airline'
     use "lukas-reineke/indent-blankline.nvim"
+    use 'github/copilot.vim'
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
         requires = { {'nvim-lua/plenary.nvim'} }
