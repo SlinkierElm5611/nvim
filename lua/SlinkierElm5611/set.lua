@@ -11,3 +11,10 @@ vim.opt.incsearch = true
 vim.opt.scrolloff = 8
 vim.opt.wrap = false
 vim.opt.swapfile = false
+
+--copilot settings
+vim.g.copilot_assume_mapped = true
+vim.g.copilot_no_tab_map = true
+
+--git blamer settings
+vim.g.blamer_delay = 0
