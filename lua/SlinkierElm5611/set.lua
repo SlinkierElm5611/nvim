@@ -18,3 +18,10 @@ vim.g.copilot_no_tab_map = true
 
 --git blamer settings
 vim.g.blamer_delay = 0
+
+-- add unkonwn filetypes
+vim.filetype.add({
+    extension = {
+        wgsl = "wgsl"
+    }
+})
