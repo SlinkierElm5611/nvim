@@ -21,6 +21,20 @@ vim.api.nvim_create_autocmd({"BufWritePost"}, {
     end,
 })
 
+-- dap
+--require("mason-nvim-dap").setup()
+--local dap, dapui = require("dap"), require("dapui")
+--
+--dap.listeners.after.event_initialized["dapui_config"] = function()
+--    dapui.open()
+--end
+--dap.listeners.before.event_terminated["dapui_config"] = function()
+--    dapui.close()
+--end
+--dap.listeners.before.event_exited["dapui_config"] = function()
+--    dapui.close()
+--end
+
 -- copilot
 vim.keymap.set("i", "<C-a>", "copilot#Accept('<CR>')", {expr=true,silent=true,noremap=true,replace_keycodes=false})
 
