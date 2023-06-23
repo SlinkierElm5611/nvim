@@ -103,3 +103,14 @@ require("indent_blankline").setup {
 
 -- startup screen
 require("startup").setup({theme = 'evil'})
+
+-- hypersonic
+ require('hypersonic').setup({
+    border = 'rounded',
+    winblend = 0,
+    add_padding = true,
+    hl_group = 'Keyword',
+    wrapping = '"'
+})
+
+vim.keymap.set('v', '<leader>r', ':Hypersonic <CR>', { silent = true })
