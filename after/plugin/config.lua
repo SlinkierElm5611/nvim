@@ -42,6 +42,7 @@ vim.keymap.set("i", "<C-a>", "copilot#Accept('<CR>')", {expr=true,silent=true,no
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git);
 vim.keymap.set("n", "<leader>gc", "<cmd>Git commit %<CR>");
 vim.keymap.set("n", "<leader>gca", "<cmd>Git commit -a<CR>");
+vim.keymap.set("n", "<leader>gp", "<cmd>Git push<CR>")
 
 -- telescope
 local telescope = require('telescope')
