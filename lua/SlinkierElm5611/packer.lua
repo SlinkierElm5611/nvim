@@ -35,11 +35,12 @@ return require('packer').startup(function(use)
         }
     }
     use 'mfussenegger/nvim-lint'
- --   use "mfussenegger/nvim-dap"
- --   use "jay-babu/mason-nvim-dap.nvim"
- --   use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+    --   use "mfussenegger/nvim-dap"
+    --   use "jay-babu/mason-nvim-dap.nvim"
+    --   use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
     use {
         "startup-nvim/startup.nvim",
         requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
     }
+    use 'p00f/nvim-ts-rainbow'
 end)
