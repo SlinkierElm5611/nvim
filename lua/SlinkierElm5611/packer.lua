@@ -8,6 +8,7 @@ return require('packer').startup(function(use)
     use "lukas-reineke/indent-blankline.nvim"
     use 'tomiis4/Hypersonic.nvim'
     use 'github/copilot.vim'
+    use 'tpope/vim-surround'
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
         requires = { {'nvim-lua/plenary.nvim'} }
