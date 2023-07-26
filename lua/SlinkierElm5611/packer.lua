@@ -4,7 +4,10 @@ return require('packer').startup(function(use)
     use 'folke/tokyonight.nvim'
     use 'APZelos/blamer.nvim'
     use 'airblade/vim-gitgutter'
-    use 'vim-airline/vim-airline'
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
     use "lukas-reineke/indent-blankline.nvim"
     use 'tomiis4/Hypersonic.nvim'
     use 'github/copilot.vim'
