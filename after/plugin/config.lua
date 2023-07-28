@@ -147,10 +147,10 @@ require('lualine').setup {
     },
     sections = {
         lualine_a = {'location'},
-        lualine_b = {'branch', 'diff', 'diagnostics'},
+        lualine_b = {'branch'},
         lualine_c = {},
-        lualine_x = {'encoding',  'filetype'},
-        lualine_y = {},
+        lualine_x = {},
+        lualine_y = {'encoding',  'filetype'},
         lualine_z = {'filename'}
     },
     inactive_sections = {
@@ -166,3 +166,8 @@ require('lualine').setup {
     inactive_winbar = {},
     extensions = {}
 }
+
+-- window keymaps
+
+vim.keymap.set('n', '<leader>sv', ':split<CR>', { silent = true })
+vim.keymap.set('n', '<leader>sh', ':vsplit<CR>', { silent = true })
