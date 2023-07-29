@@ -21,15 +21,6 @@ vim.api.nvim_create_autocmd({"BufWritePost"}, {
     end,
 })
 
--- copilot
-vim.keymap.set("i", "<C-a>", "copilot#Accept('<CR>')", {expr=true,silent=true,noremap=true,replace_keycodes=false})
-
--- fugitive
-vim.keymap.set("n", "<leader>gs", vim.cmd.Git);
-vim.keymap.set("n", "<leader>gc", "<cmd>Git commit %<CR>");
-vim.keymap.set("n", "<leader>gca", "<cmd>Git commit -a<CR>");
-vim.keymap.set("n", "<leader>gp", "<cmd>Git push<CR>")
-
 -- telescope
 local telescope = require('telescope')
 telescope.setup{
@@ -45,10 +36,6 @@ telescope.setup{
         },
     },
 }
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
-vim.keymap.set("n", "<C-p>", builtin.git_files, {})
-vim.keymap.set('n', '<leader>ps', builtin.live_grep, {})
 
 -- treesitter
 require'nvim-treesitter.configs'.setup {
@@ -173,7 +160,3 @@ require('lualine').setup {
     inactive_winbar = {},
     extensions = {}
 }
-
--- window keymaps
-vim.keymap.set('n', '<leader>sv', ':split<CR>', { silent = true })
-vim.keymap.set('n', '<leader>sh', ':vsplit<CR>', { silent = true })
