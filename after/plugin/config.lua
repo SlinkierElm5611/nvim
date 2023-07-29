@@ -117,8 +117,6 @@ require("startup").setup({theme = 'evil'})
     wrapping = '"'
 })
 
-vim.keymap.set('v', '<leader>r', ':Hypersonic <CR>', { silent = true })
-
 -- lualine
 require('lualine').setup {
     options = {

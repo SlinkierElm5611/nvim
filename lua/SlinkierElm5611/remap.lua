@@ -14,6 +14,9 @@ vim.keymap.set('n', '<leader>pf', "<cmd>Telescope find_files<CR>", {})
 vim.keymap.set("n", "<C-p>", "<cmd>Telescope git_files<CR>", {})
 vim.keymap.set('n', '<leader>ps', "<cmd>Telescope live_grep<CR>", {})
 
+-- hypersonic
+vim.keymap.set('v', '<leader>r', ':Hypersonic <CR>', { silent = true })
+
 -- window keymaps
 vim.keymap.set('n', '<leader>sv', ':split<CR>', { silent = true })
 vim.keymap.set('n', '<leader>sh', ':vsplit<CR>', { silent = true })
