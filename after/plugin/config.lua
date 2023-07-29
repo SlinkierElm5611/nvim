@@ -21,20 +21,6 @@ vim.api.nvim_create_autocmd({"BufWritePost"}, {
     end,
 })
 
--- dap
---require("mason-nvim-dap").setup()
---local dap, dapui = require("dap"), require("dapui")
---
---dap.listeners.after.event_initialized["dapui_config"] = function()
---    dapui.open()
---end
---dap.listeners.before.event_terminated["dapui_config"] = function()
---    dapui.close()
---end
---dap.listeners.before.event_exited["dapui_config"] = function()
---    dapui.close()
---end
-
 -- copilot
 vim.keymap.set("i", "<C-a>", "copilot#Accept('<CR>')", {expr=true,silent=true,noremap=true,replace_keycodes=false})
 
@@ -80,6 +66,29 @@ require'nvim-treesitter.configs'.setup {
   },
 }
 
+-- rainbow delimiters
+local rainbow_delimiters = require 'rainbow-delimiters'
+
+vim.g.rainbow_delimiters = {
+    strategy = {
+        [''] = rainbow_delimiters.strategy['global'],
+        vim = rainbow_delimiters.strategy['local'],
+    },
+    query = {
+        [''] = 'rainbow-delimiters',
+        lua = 'rainbow-blocks',
+    },
+    highlight = {
+        'RainbowDelimiterRed',
+        'RainbowDelimiterYellow',
+        'RainbowDelimiterBlue',
+        'RainbowDelimiterOrange',
+        'RainbowDelimiterGreen',
+        'RainbowDelimiterViolet',
+        'RainbowDelimiterCyan',
+    },
+}
+
 -- blamer
 vim.cmd[[BlamerShow]]
 
@@ -123,9 +132,7 @@ require("startup").setup({theme = 'evil'})
 
 vim.keymap.set('v', '<leader>r', ':Hypersonic <CR>', { silent = true })
 
-
 -- lualine
-
 require('lualine').setup {
     options = {
         icons_enabled = true,
@@ -168,6 +175,5 @@ require('lualine').setup {
 }
 
 -- window keymaps
-
 vim.keymap.set('n', '<leader>sv', ':split<CR>', { silent = true })
 vim.keymap.set('n', '<leader>sh', ':vsplit<CR>', { silent = true })
