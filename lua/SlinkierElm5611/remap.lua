@@ -21,3 +21,6 @@ vim.keymap.set('v', '<leader>r', ':Hypersonic <CR>', { silent = true })
 vim.keymap.set('n', '<leader>sv', ':split<CR>', { silent = true })
 vim.keymap.set('n', '<leader>sh', ':vsplit<CR>', { silent = true })
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+
+-- buffer keymaps
+vim.keymap.set('n', '<leader>bw', ':bufdo bwipeout<CR>', { silent = true })
