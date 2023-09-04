@@ -12,7 +12,6 @@ local lint = require('lint')
 lint.linters_by_ft = {
     python = {'pylint'},
     rust = {'cargo'},
-    javascript = {'eslint'},
 }
 
 vim.api.nvim_create_autocmd({"BufWritePost"}, {
