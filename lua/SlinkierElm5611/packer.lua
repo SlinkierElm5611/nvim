@@ -46,4 +46,8 @@ return require('packer').startup(function(use)
         requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
     }
     use 'hiphish/rainbow-delimiters.nvim'
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
+    })
 end)
