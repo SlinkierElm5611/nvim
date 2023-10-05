@@ -11,7 +11,7 @@ vim.opt.incsearch = true
 vim.opt.scrolloff = 8
 vim.opt.wrap = false
 vim.opt.swapfile = false
-vim.opt.clipboard = "unnamed"
+vim.opt.clipboard = "unnamedplus"
 
 --copilot settings
 vim.g.copilot_assume_mapped = true
