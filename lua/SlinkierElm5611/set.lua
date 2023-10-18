@@ -12,6 +12,7 @@ vim.opt.scrolloff = 8
 vim.opt.wrap = false
 vim.opt.swapfile = false
 vim.opt.clipboard = "unnamedplus"
+vim.opt.mouse = ""
 
 --copilot settings
 vim.g.copilot_assume_mapped = true
