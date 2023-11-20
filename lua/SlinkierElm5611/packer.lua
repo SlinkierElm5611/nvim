@@ -4,6 +4,7 @@ return require('packer').startup(function(use)
     use 'folke/tokyonight.nvim'
     use 'APZelos/blamer.nvim'
     use 'airblade/vim-gitgutter'
+    use 'nvim-tree/nvim-web-devicons'
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'nvim-tree/nvim-web-devicons', opt = true }
@@ -49,5 +50,12 @@ return require('packer').startup(function(use)
     use({
         "iamcco/markdown-preview.nvim",
         run = function() vim.fn["mkdp#util#install"]() end,
+    })
+    use ({
+        "folke/noice.nvim",
+        requires = {
+            "MunifTanjim/nui.nvim",
+            "rcarriga/nvim-notify",
+        }
     })
 end)

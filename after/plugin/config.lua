@@ -159,3 +159,11 @@ require('lualine').setup {
     inactive_winbar = {},
     extensions = {}
 }
+
+-- noice
+require('noice').setup()
+
+-- devicons
+require'nvim-web-devicons'.setup {
+    default = true;
+}
