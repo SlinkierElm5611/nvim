@@ -58,4 +58,5 @@ return require('packer').startup(function(use)
             "rcarriga/nvim-notify",
         }
     })
+    use "David-Kunz/gen.nvim"
 end)

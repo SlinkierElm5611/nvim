@@ -167,3 +167,8 @@ require('noice').setup()
 require'nvim-web-devicons'.setup {
     default = true;
 }
+
+-- ollama gen-nvim
+require("gen").setup({
+    model="dolphin-mixtral"
+})
