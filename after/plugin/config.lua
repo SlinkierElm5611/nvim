@@ -170,5 +170,5 @@ require'nvim-web-devicons'.setup {
 
 -- ollama gen-nvim
 require("gen").setup({
-    model="dolphin-mixtral"
+    model="codellama"
 })
