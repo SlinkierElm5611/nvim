@@ -11,7 +11,7 @@ require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 local lint = require('lint')
 lint.linters_by_ft = {
     python = {'pylint'},
-    rust = {'cargo'},
+		cpp = {'cppcheck'},
 }
 
 vim.api.nvim_create_autocmd({"BufWritePost"}, {
