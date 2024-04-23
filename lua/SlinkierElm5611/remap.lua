@@ -27,3 +27,6 @@ vim.keymap.set('n', '<leader>bw', ':bufdo bwipeout<CR>', { silent = true })
 
 -- gen remaps
 vim.keymap.set('n', '<leader>sm', ":lua require('gen').select_model() <CR>")
+
+-- noice remaps
+vim.keymap.set('n', '<leader>nc', ':NoiceDismiss<CR>', { silent = true })
