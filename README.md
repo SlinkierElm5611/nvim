@@ -2,8 +2,6 @@
 ### Description
 This is my neovim configuration which I use for all my programming needs: (c++, python, rust, js/ts, web, cuda/glsl/wgsl)
 You are free to use this config as you like, but I would recommend you fork/mirror it to modify it to your liking. Pull requests will be ignored.
-
-
 ### Features
 - LSP support with file type detection through lsp-zero.
 - Linter support through nvim-lint.
@@ -13,7 +11,6 @@ You are free to use this config as you like, but I would recommend you fork/mirr
 - Git integration with Fugitive.
 - Gen integration for local Ollama LLM integration (locally run github copilot).
 - and many more...
-
 ### Setup
 #### Setup Script
 1. Clone this repo to your nvim config directory. (usually `~/.config/nvim`)
@@ -31,11 +28,9 @@ You are free to use this config as you like, but I would recommend you fork/mirr
 4. For c++ linting (without this, the editor will complain when you write a buffer in cpp), install cppcheck. (can be installed through `sudo apt install cppcheck`)
 5. For python linting (without this, the editor will complain when you write a buffer in python), install pylint. (can be installed through `pip install pylint`)
 6. Install Ollama for local LLM support.
-
 ### Project Structure
 - `lua/SlinkierElm5611` contains all the startup Lua files in the config(key mappings, nvim settings, packer integration).
 - `after/plugin/config.lua` contains all the plugin configurations (runs after nvim startup is finished.
-
 ### Custom Keybindings
 (All keybindings can be found in `lua/SlinkierElm5611/remap.lua`)
 #### Normal Mode
@@ -52,9 +47,7 @@ You are free to use this config as you like, but I would recommend you fork/mirr
 - `<leader>pv` - Open netrw.
 - `<leader>bw` - Wipeout all open buffers. (returns nvim to a clean state)
 - `<leader>nc` - Clear Noice notifications (to quickly clear screen).
-
 #### Insert Mode
 - `<C-a>` - Accept copilot suggestion.
-
 #### Visual Mode
 - `<leader>r` - Hypersonic regex validation
