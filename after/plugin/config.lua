@@ -187,7 +187,7 @@ require'nvim-web-devicons'.setup {
 
 -- ollama gen-nvim
 require("gen").setup({
-	model="codellama",
-	host="http:ib.my.to",
+	model="mistral-nemo",
+	host="ib.my.to",
 	port = 11434
 })
