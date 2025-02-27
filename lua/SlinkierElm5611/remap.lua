@@ -30,3 +30,6 @@ vim.keymap.set('n', '<leader>sm', ":lua require('gen').select_model() <CR>")
 
 -- noice remaps
 vim.keymap.set('n', '<leader>nc', ':NoiceDismiss<CR>', { silent = true })
+
+-- terminal remaps
+vim.keymap.set('t', '<Esc>', '<C-\\><C-N>', { silent = true })
