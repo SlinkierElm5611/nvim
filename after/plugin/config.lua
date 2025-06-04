@@ -182,31 +182,20 @@ require('lualine').setup {
 			winbar = {},
 		},
 		ignore_focus = {},
-		always_divide_middle = true,
-		globalstatus = false,
+		always_divide_middle = false,
+		globalstatus = true,
 		refresh = {
-			statusline = 1000,
-			tabline = 1000,
-			winbar = 1000,
+			statusline = 100,
 		}
 	},
 	sections = {
-		lualine_a = {'location'},
-		lualine_b = {'branch'},
-		lualine_c = {},
-		lualine_x = {},
+		lualine_a = {'branch'},
+		lualine_b = {'location'},
+		lualine_c = {'progress'},
+		lualine_x = {'datetime'},
 		lualine_y = {'encoding',  'filetype'},
 		lualine_z = {'filename'}
 	},
-	inactive_sections = {
-		lualine_a = {},
-		lualine_b = {},
-		lualine_c = {'filename'},
-		lualine_x = {'location'},
-		lualine_y = {},
-		lualine_z = {}
-	},
-	tabline = {},
 	winbar = {},
 	inactive_winbar = {},
 	extensions = {}
