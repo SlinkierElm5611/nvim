@@ -189,12 +189,25 @@ require('lualine').setup {
 		}
 	},
 	sections = {
-		lualine_a = {'branch'},
+		lualine_a = {'lsp_status'},
 		lualine_b = {'location'},
 		lualine_c = {'progress'},
-		lualine_x = {'datetime'},
+		lualine_x = {},
 		lualine_y = {'encoding',  'filetype'},
 		lualine_z = {'filename'}
+	},
+	tabline = {
+		lualine_a = {'branch'},
+		lualine_b = {'diff'},
+		lualine_c = {},
+		lualine_x = {
+			{
+				'datetime',
+				style = '%d/%m/%Y %H:%M:%S',
+			}
+		},
+		lualine_y = {'filesize'},
+		lualine_z = {'fileformat'}
 	},
 	winbar = {},
 	inactive_winbar = {},
