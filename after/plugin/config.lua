@@ -50,6 +50,9 @@ cmp.setup({
 
     -- Ctrl + space triggers completion menu
     ['<C-Space>'] = cmp.mapping.complete(),
+		-- Ctrl + n and Ctrl + p navigate through completion items
+		['<C-n>'] = cmp.mapping.select_next_item(),
+		['<C-p>'] = cmp.mapping.select_prev_item(),
   }),
   snippet = {
     expand = function(args)

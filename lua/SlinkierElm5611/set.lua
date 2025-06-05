@@ -1,4 +1,4 @@
-vim.opt.updatetime=100
+vim.opt.updatetime=16
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.tabstop = 4
