@@ -131,7 +131,11 @@ vim.g.rainbow_delimiters = {
 }
 
 -- blamer
-vim.cmd[[BlamerShow]]
+if vim.loop.os_uname().sysname == "Windows_NT" then
+	vim.cmd[[BlamerHide]]
+else
+	vim.cmd[[BlamerShow]]
+end
 
 -- colour scheme
 vim.cmd[[colorscheme tokyonight-night]]
