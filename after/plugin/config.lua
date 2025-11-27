@@ -1,4 +1,10 @@
 -- lsp setup
+vim.lsp.config("dart", {
+	cmd = {"dart", "language-server", "--client-id my-editor.my-plugin", "--client-version 1.2"},
+	filetypes = {"dart"},
+	root_markers = {"pubspec.yaml", ".git"},
+})
+vim.lsp.enable("dart")
 vim.keymap.set('n', 'gl', '<cmd>lua vim.diagnostic.open_float()<cr>')
 vim.keymap.set('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<cr>')
 vim.keymap.set('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<cr>') 
