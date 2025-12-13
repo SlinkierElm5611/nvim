@@ -256,6 +256,6 @@ require'nvim-web-devicons'.setup {
 -- ollama gen-nvim
 require("gen").setup({
 	model="mistral-nemo",
-	host="ib.my.to",
+	host="baltaovpn.tplinkdns.com",
 	port = 11434
 })
