@@ -17,7 +17,7 @@ return require('packer').startup(function(use)
         'nvim-telescope/telescope.nvim', branch = "0.1.x",
         requires = { {'nvim-lua/plenary.nvim'} }
     }
-    use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate', branch = 'master'}
     use ('tpope/vim-fugitive')
 		use {'neovim/nvim-lspconfig'}
 		use {"williamboman/mason.nvim"}
