@@ -10,9 +10,8 @@ case "$(uname -m)" in
 	aarch64 | arm64) ts_arch=arm64 ;;
 	*) ts_arch=x64 ;;
 esac
-mkdir -p ~/.local/bin
-curl -fsSL "https://github.com/tree-sitter/tree-sitter/releases/latest/download/tree-sitter-linux-$ts_arch.gz" | gunzip > ~/.local/bin/tree-sitter
-chmod +x ~/.local/bin/tree-sitter
+curl -fsSL "https://github.com/tree-sitter/tree-sitter/releases/latest/download/tree-sitter-linux-$ts_arch.gz" | gunzip | sudo tee /usr/local/bin/tree-sitter > /dev/null
+sudo chmod +x /usr/local/bin/tree-sitter
 
 # nodejs 22+ for copilot
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.8/install.sh | bash
@@ -21,5 +20,4 @@ export NVM_DIR="$HOME/.nvm"
 nvm install --lts
 
 # lazy.nvim bootstraps itself, then installs every plugin
-export PATH="$HOME/.local/bin:$PATH"
 nvim --headless "+Lazy! sync" +qa
