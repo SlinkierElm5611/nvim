@@ -1,35 +1,37 @@
 vim.g.mapleader = " "
 
+local map = vim.keymap.set
+
 -- copilot
-vim.keymap.set("i", "<C-a>", "copilot#Accept('<CR>')", {expr=true,silent=true,noremap=true,replace_keycodes=false})
+map("i", "<C-a>", 'copilot#Accept("\\<CR>")', { expr = true, silent = true, replace_keycodes = false, desc = "Accept Copilot suggestion" })
 
 -- fugitive
-vim.keymap.set("n", "<leader>gs", vim.cmd.Git);
-vim.keymap.set("n", "<leader>gc", "<cmd>Git commit %<CR>");
-vim.keymap.set("n", "<leader>gca", "<cmd>Git commit -a<CR>");
-vim.keymap.set("n", "<leader>gp", "<cmd>Git push<CR>")
+map("n", "<leader>gs", vim.cmd.Git, { desc = "Git status" })
+map("n", "<leader>gc", "<cmd>Git commit %<CR>", { desc = "Git commit current file" })
+map("n", "<leader>gca", "<cmd>Git commit -a<CR>", { desc = "Git commit all" })
+map("n", "<leader>gp", "<cmd>Git push<CR>", { desc = "Git push" })
 
 -- telescope
-vim.keymap.set('n', '<leader>pf', "<cmd>Telescope find_files<CR>", {})
-vim.keymap.set("n", "<C-p>", "<cmd>Telescope git_files<CR>", {})
-vim.keymap.set('n', '<leader>ps', "<cmd>Telescope live_grep<CR>", {})
+map("n", "<leader>pf", "<cmd>Telescope find_files<CR>", { desc = "Find files" })
+map("n", "<C-p>", "<cmd>Telescope git_files<CR>", { desc = "Find git files" })
+map("n", "<leader>ps", "<cmd>Telescope live_grep<CR>", { desc = "Live grep" })
 
 -- hypersonic
-vim.keymap.set('v', '<leader>r', ':Hypersonic <CR>', { silent = true })
+map("x", "<leader>r", ":Hypersonic<CR>", { silent = true, desc = "Explain regex" })
 
 -- window keymaps
-vim.keymap.set('n', '<leader>sv', ':split<CR>', { silent = true })
-vim.keymap.set('n', '<leader>sh', ':vsplit<CR>', { silent = true })
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+map("n", "<leader>sv", "<cmd>split<CR>", { desc = "Split window" })
+map("n", "<leader>sh", "<cmd>vsplit<CR>", { desc = "Split window vertically" })
+map("n", "<leader>pv", vim.cmd.Ex, { desc = "Open netrw" })
 
 -- buffer keymaps
-vim.keymap.set('n', '<leader>bw', ':bufdo bwipeout<CR>', { silent = true })
+map("n", "<leader>bw", "<cmd>bufdo bwipeout<CR>", { desc = "Wipe out all buffers" })
 
 -- gen remaps
-vim.keymap.set('n', '<leader>sm', ":lua require('gen').select_model() <CR>")
+map("n", "<leader>sm", function() require("gen").select_model() end, { desc = "Select Ollama model" })
 
 -- noice remaps
-vim.keymap.set('n', '<leader>nc', ':NoiceDismiss<CR>', { silent = true })
+map("n", "<leader>nc", "<cmd>NoiceDismiss<CR>", { desc = "Dismiss notifications" })
 
 -- terminal remaps
-vim.keymap.set('t', '<Esc>', '<C-\\><C-N>', { silent = true })
+map("t", "<Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })

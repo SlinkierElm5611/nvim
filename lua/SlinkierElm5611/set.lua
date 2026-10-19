@@ -1,4 +1,4 @@
-vim.opt.updatetime=16
+vim.opt.updatetime = 16
 vim.opt.nu = true
 vim.opt.relativenumber = true
 vim.opt.tabstop = 4
@@ -11,19 +11,10 @@ vim.opt.incsearch = true
 vim.opt.scrolloff = 8
 vim.opt.wrap = false
 vim.opt.swapfile = false
-vim.opt.clipboard = "unnamedplus"
 vim.opt.mouse = ""
+vim.opt.termguicolors = true
 
---copilot settings
-vim.g.copilot_assume_mapped = true
-vim.g.copilot_no_tab_map = true
-
---git blamer settings
-vim.g.blamer_delay = 0
-
--- add unkonwn filetypes
-vim.filetype.add({
-    extension = {
-        wgsl = "wgsl"
-    }
-})
+-- loading the clipboard provider is slow, so defer it until after startup
+vim.schedule(function()
+	vim.opt.clipboard = "unnamedplus"
+end)
