@@ -9,9 +9,7 @@ You are free to use this config as you like, but I would recommend you fork/mirr
 - Linter support through nvim-lint.
 - Treesitter for syntax highlighting.
 - Telescope for fuzzy finding files and live-grepping files.
-- Github Copilot integration.
 - Git integration with Fugitive, plus gitsigns for hunks and inline blame.
-- Gen integration for local Ollama LLM integration (locally run github copilot).
 - and many more...
 ### Setup
 #### Setup Script
@@ -22,15 +20,13 @@ You are free to use this config as you like, but I would recommend you fork/mirr
 2. Install the [tree-sitter CLI](https://github.com/tree-sitter/tree-sitter/releases) 0.26.1+ and put it on your `PATH`. nvim-treesitter uses it to build parsers. (don't use the npm package; most distro packages are too old)
 3. Open nvim. lazy.nvim installs itself and every plugin on first launch. (`:Lazy` shows plugin status, `:Lazy sync` updates plugins)
 4. Install `ripgrep` for telescope live-grep support. (can be installed through `sudo apt install ripgrep`)
-5. Install and setup nodejs 22+ for Copilot support. (recommended method: [nvm](https://github.com/nvm-sh/nvm), then `nvm install --lts`)
+5. Install and setup nodejs 22+ for npm-based language servers installed through mason (e.g. typescript, html). (recommended method: [nvm](https://github.com/nvm-sh/nvm), then `nvm install --lts`)
 ### Post Setup
 1. Install `3270 Nerd Font Regular` from Nerd Fonts repo for icons to work properly. (optional)
-2. To setup Copilot, run `:Copilot setup` and follow the instructions.
-3. To install an LSP for the open file type, type `:LspInstall` and select the LSP you want to install. Installed servers are enabled automatically.
-4. For c++ linting (without this, the editor will complain when you write a buffer in cpp), install cppcheck. (can be installed through `sudo apt install cppcheck`)
-5. For python linting (without this, the editor will complain when you write a buffer in python), install pylint. (can be installed through `pip install pylint`)
-6. For dart, install the dart (or flutter) SDK; its language server is enabled automatically.
-7. Install Ollama for local LLM support.
+2. To install an LSP for the open file type, type `:LspInstall` and select the LSP you want to install. Installed servers are enabled automatically.
+3. For c++ linting (without this, the editor will complain when you write a buffer in cpp), install cppcheck. (can be installed through `sudo apt install cppcheck`)
+4. For python linting (without this, the editor will complain when you write a buffer in python), install pylint. (can be installed through `pip install pylint`)
+5. For dart, install the dart (or flutter) SDK; its language server is enabled automatically.
 ### Project Structure
 - `lua/SlinkierElm5611/set.lua` - nvim settings.
 - `lua/SlinkierElm5611/remap.lua` - key mappings.
@@ -53,7 +49,6 @@ You are free to use this config as you like, but I would recommend you fork/mirr
 - `<leader>pv` - Open netrw.
 - `<leader>bw` - Wipeout all open buffers. (returns nvim to a clean state)
 - `<leader>nc` - Clear Noice notifications (to quickly clear screen).
-- `<leader>sm` - Select the Ollama model used by Gen.
 - `]c` / `[c` - Next / previous git hunk.
 - `<leader>hp` / `<leader>hs` / `<leader>hu` - Preview / stage / undo git hunk.
 - `gl` - Show diagnostic under cursor. `]d` / `[d` - Next / previous diagnostic.
@@ -64,7 +59,6 @@ You are free to use this config as you like, but I would recommend you fork/mirr
 - `gs` - Signature help.
 - `<F2>` - Rename. `<F3>` - Format. `<F4>` - Code action.
 #### Insert Mode
-- `<C-a>` - Accept copilot suggestion.
 - `<C-Space>` - Open completion menu. `<C-n>` / `<C-p>` - Next / previous item. `<CR>` - Accept selected item.
 #### Visual Mode
 - `<leader>r` - Hypersonic regex validation

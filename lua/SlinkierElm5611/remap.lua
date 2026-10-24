@@ -2,9 +2,6 @@ vim.g.mapleader = " "
 
 local map = vim.keymap.set
 
--- copilot
-map("i", "<C-a>", 'copilot#Accept("\\<CR>")', { expr = true, silent = true, replace_keycodes = false, desc = "Accept Copilot suggestion" })
-
 -- fugitive
 map("n", "<leader>gs", vim.cmd.Git, { desc = "Git status" })
 map("n", "<leader>gc", "<cmd>Git commit %<CR>", { desc = "Git commit current file" })
@@ -26,9 +23,6 @@ map("n", "<leader>pv", vim.cmd.Ex, { desc = "Open netrw" })
 
 -- buffer keymaps
 map("n", "<leader>bw", "<cmd>bufdo bwipeout<CR>", { desc = "Wipe out all buffers" })
-
--- gen remaps
-map("n", "<leader>sm", function() require("gen").select_model() end, { desc = "Select Ollama model" })
 
 -- noice remaps
 map("n", "<leader>nc", "<cmd>NoiceDismiss<CR>", { desc = "Dismiss notifications" })

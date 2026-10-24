@@ -13,7 +13,7 @@ esac
 curl -fsSL "https://github.com/tree-sitter/tree-sitter/releases/latest/download/tree-sitter-linux-$ts_arch.gz" | gunzip | sudo tee /usr/local/bin/tree-sitter > /dev/null
 sudo chmod +x /usr/local/bin/tree-sitter
 
-# nodejs 22+ for copilot
+# nodejs 22+ for npm-based language servers installed through mason
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.8/install.sh | bash
 export NVM_DIR="$HOME/.nvm"
 . "$NVM_DIR/nvm.sh"
