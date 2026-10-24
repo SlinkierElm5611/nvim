@@ -14,17 +14,17 @@ You are free to use this config as you like, but I would recommend you fork/mirr
 ### Setup
 #### Setup Script
 1. Clone this repo to your nvim config directory. (usually `~/.config/nvim`)
-2. Install nvim 0.12+, then run the setup script with `./setup_config.sh` to install dependencies and plugins. (Ubuntu/Debian)
+2. Install nvim 0.12+, then run the setup script with `./setup_config.sh` to install dependencies and plugins. (Linux with apt, dnf, pacman, zypper or apk; macOS with Homebrew; Windows through WSL)
 #### Manual Setup
 1. Install nvim 0.12+ (distro packages are often too old; use the [official release](https://github.com/neovim/neovim/releases) or Homebrew), plus git, curl, tar and a C compiler.
 2. Install the [tree-sitter CLI](https://github.com/tree-sitter/tree-sitter/releases) 0.26.1+ and put it on your `PATH`. nvim-treesitter uses it to build parsers. (don't use the npm package; most distro packages are too old)
 3. Open nvim. lazy.nvim installs itself and every plugin on first launch. (`:Lazy` shows plugin status, `:Lazy sync` updates plugins)
-4. Install `ripgrep` for telescope live-grep support. (can be installed through `sudo apt install ripgrep`)
+4. Install `ripgrep` for telescope live-grep support. (available as `ripgrep` in most package managers and Homebrew)
 5. Install and setup nodejs 22+ for npm-based language servers installed through mason (e.g. typescript, html). (recommended method: [nvm](https://github.com/nvm-sh/nvm), then `nvm install --lts`)
 ### Post Setup
 1. Install `3270 Nerd Font Regular` from Nerd Fonts repo for icons to work properly. (optional)
 2. To install an LSP for the open file type, type `:LspInstall` and select the LSP you want to install. Installed servers are enabled automatically.
-3. For c++ linting (without this, the editor will complain when you write a buffer in cpp), install cppcheck. (can be installed through `sudo apt install cppcheck`)
+3. For c++ linting (without this, the editor will complain when you write a buffer in cpp), install cppcheck. (available as `cppcheck` in most package managers and Homebrew)
 4. For python linting (without this, the editor will complain when you write a buffer in python), install pylint. (can be installed through `pip install pylint`)
 5. For dart, install the dart (or flutter) SDK; its language server is enabled automatically.
 ### Project Structure
