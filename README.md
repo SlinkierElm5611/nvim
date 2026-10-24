@@ -31,10 +31,6 @@ You are free to use this config as you like, but I would recommend you fork/mirr
 5. For python linting (without this, the editor will complain when you write a buffer in python), install pylint. (can be installed through `pip install pylint`)
 6. For dart, install the dart (or flutter) SDK; its language server is enabled automatically.
 7. Install Ollama for local LLM support.
-### Upgrading From The Packer Version
-Plugins now live in `~/.local/share/nvim/lazy`. The old packer install can be removed:
-- `rm -rf ~/.local/share/nvim/site/pack/packer`
-- `rm -f ~/.config/nvim/plugin/packer_compiled.lua`
 ### Project Structure
 - `lua/SlinkierElm5611/set.lua` - nvim settings.
 - `lua/SlinkierElm5611/remap.lua` - key mappings.

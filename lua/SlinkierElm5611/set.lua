@@ -14,6 +14,13 @@ vim.opt.swapfile = false
 vim.opt.mouse = ""
 vim.opt.termguicolors = true
 
+-- add unknown filetypes
+vim.filetype.add({
+	extension = {
+		wgsl = "wgsl",
+	},
+})
+
 -- loading the clipboard provider is slow, so defer it until after startup
 vim.schedule(function()
 	vim.opt.clipboard = "unnamedplus"

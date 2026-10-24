@@ -33,6 +33,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	end,
 })
 
+-- every server gets blink's capabilities (snippets, resolve support) for completion
+vim.lsp.config("*", { capabilities = require("blink.cmp").get_lsp_capabilities() })
+
 -- servers installed through mason are enabled by mason-lspconfig (see plugins/lsp.lua);
 -- the dart server ships with the dart SDK, so enable nvim-lspconfig's config for it here
+-- and keep the .git root fallback from the packer config
+vim.lsp.config("dartls", { root_markers = { "pubspec.yaml", ".git" } })
 vim.lsp.enable("dartls")

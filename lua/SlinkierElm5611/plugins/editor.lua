@@ -5,7 +5,10 @@ return {
 		"nvim-telescope/telescope.nvim",
 		version = "*",
 		cmd = "Telescope",
-		dependencies = { "nvim-lua/plenary.nvim" },
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope-file-browser.nvim", -- used by the startup screen
+		},
 		opts = {
 			pickers = {
 				find_files = {
@@ -20,6 +23,10 @@ return {
 				},
 			},
 		},
+		config = function(_, opts)
+			require("telescope").setup(opts)
+			require("telescope").load_extension("file_browser")
+		end,
 	},
 
 	{
@@ -73,6 +80,7 @@ return {
 	{
 		"tomiis4/Hypersonic.nvim",
 		cmd = "Hypersonic",
+		event = "CmdlineEnter", -- live cmdline explanation needs setup at startup
 		main = "hypersonic",
 		opts = {
 			border = "rounded",
@@ -88,7 +96,6 @@ return {
 		cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
 		ft = "markdown",
 		build = function()
-			require("lazy").load({ plugins = { "markdown-preview.nvim" } })
 			vim.fn["mkdp#util#install"]()
 		end,
 	},
